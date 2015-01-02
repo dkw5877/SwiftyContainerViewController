@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6724" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6711"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SwiftyContainerViewController" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQn-gU-9Kk">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="100"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="5li-bY-U5T">
+                                        <rect key="frame" x="270" y="64" width="227" height="29"/>
+                                        <segments>
+                                            <segment title="Table"/>
+                                            <segment title="Image"/>
+                                            <segment title="Collection"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="didSelectSegment:" destination="BYZ-38-t0r" eventType="valueChanged" id="5Zm-iu-NKU"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AMc-lh-5Mr">
+                                        <rect key="frame" x="349" y="26" width="69" height="30"/>
+                                        <state key="normal" title="Animation">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="animateViewTransition:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xIt-bu-TND"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="5li-bY-U5T" firstAttribute="top" secondItem="AMc-lh-5Mr" secondAttribute="bottom" constant="8" id="9bz-zS-Qu9"/>
+                                    <constraint firstItem="AMc-lh-5Mr" firstAttribute="top" secondItem="WQn-gU-9Kk" secondAttribute="top" constant="26" id="F2N-fK-8un"/>
+                                    <constraint firstItem="AMc-lh-5Mr" firstAttribute="centerX" secondItem="5li-bY-U5T" secondAttribute="centerX" id="WIV-6R-Zoa"/>
+                                    <constraint firstAttribute="width" constant="768" id="pn7-Yj-5Ez"/>
+                                    <constraint firstAttribute="centerX" secondItem="AMc-lh-5Mr" secondAttribute="centerX" id="sOn-lM-LWc"/>
+                                    <constraint firstAttribute="height" constant="100" id="wmU-qd-bTQ"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="WQn-gU-9Kk" secondAttribute="centerX" id="aOq-sl-Od3"/>
+                            <constraint firstItem="WQn-gU-9Kk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="okJ-zU-UXg"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+                    <connections>
+                        <outlet property="animateButton" destination="AMc-lh-5Mr" id="fio-79-5uv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="168.5" y="386.5"/>
+        </scene>
+    </scenes>
+</document>
